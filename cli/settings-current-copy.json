@@ -1,0 +1,48 @@
+{
+	"respectGitignore": false,
+	"cleanupPeriodDays": 300,
+	"model": "opus",
+	"hooks": {
+		"PreToolUse": [
+			{
+				"matcher": "Read",
+				"hooks": [
+					{
+						"type": "command",
+						"command": "~/.claude-code-docs/claude-docs-helper.sh hook-check"
+					}
+				]
+			}
+		]
+	},
+	"statusLine": {
+		"type": "command",
+		"command": "~/.claude/statusline.sh",
+		"padding": 0
+	},
+	"enabledPlugins": {
+		"typescript-lsp@claude-plugins-official": true,
+		"rust-analyzer-lsp@claude-plugins-official": true,
+		"swift-lsp@claude-plugins-official": true,
+		"commit-commands@claude-plugins-official": true,
+		"hookify@claude-plugins-official": true,
+		"plugin-dev@claude-plugins-official": true,
+		"agent-sdk-dev@claude-plugins-official": true,
+		"feature-dev@claude-plugins-official": true,
+		"ralph-loop@claude-plugins-official": true,
+		"code-simplifier@claude-plugins-official": true,
+		"huggingface-skills@claude-plugins-official": true,
+		"superpowers@claude-plugins-official": true,
+		"frontend-design@claude-plugins-official": true,
+		"claude-md-management@claude-plugins-official": true,
+		"claude-code-setup@claude-plugins-official": true,
+		"clangd-lsp@claude-plugins-official": true
+	},
+	"alwaysThinkingEnabled": true,
+	"gitAttribution": false,
+	"env": {
+		"ANTHROPIC_AUTH_TOKEN": "8d9bfcbe59THISe9b15ISd7c95b9e625.FAKEq4xk0LIRmhGy",
+		"ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
+		"API_TIMEOUT_MS": "3000000"
+	}
+}

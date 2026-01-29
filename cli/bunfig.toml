@@ -1,0 +1,34 @@
+# Bun configuration file
+# https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Configure package installation behavior
+exact = false
+# Optimize for performance
+registry = "https://registry.npmjs.org"
+# Enable package integrity verification
+verify = true
+
+[install.cache]
+# Enable install cache for faster installs
+disable = false
+# Cache directory (default: ~/.bun/install/cache)
+# dir = "~/.bun/install/cache"
+
+[test]
+# Configure test runner behavior
+root = "."
+# Set default timeout for tests (in milliseconds)
+timeout = 30000
+
+[run]
+# Configure runtime behavior
+# Automatically install missing packages
+install = true
+# Enable bun shell for scripts
+shell = "bun"
+
+[build]
+# Build configuration
+target = "bun"
+sourcemap = "external"
